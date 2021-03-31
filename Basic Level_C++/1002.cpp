@@ -109,3 +109,59 @@ int main() {
 
 	return 0;
 }
+//20分版本 在sum<10时进行一次分类讨论
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+int main() {
+	char str[101];
+	int i = 0, sum = 0, character = 0;
+	cin >> str;
+	for (i = 0; i < strlen(str); i++) {
+		character = str[i] - '0';
+		sum += character;
+	}
+	switch (sum / 100) {
+	case 0:break;
+	case 1:cout << "yi "; break;
+	case 2:cout << "er "; break;
+	case 3:cout << "san "; break;
+	case 4:cout << "si "; break;
+	case 5:cout << "wu "; break;
+	case 6:cout << "liu "; break;
+	case 7:cout << "qi "; break;
+	case 8:cout << "ba "; break;
+	case 9:cout << "jiu "; break;
+	default:break;
+	}	
+	switch ((sum-((sum/100)*100))/10) {
+	case 0:if(sum<10)break;
+		else
+		cout << "ling "; break;
+	case 1:cout << "yi "; break;
+	case 2:cout << "er "; break;
+	case 3:cout << "san "; break;
+	case 4:cout << "si "; break;
+	case 5:cout << "wu "; break;
+	case 6:cout << "liu "; break;
+	case 7:cout << "qi "; break;
+	case 8:cout << "ba "; break;
+	case 9:cout << "jiu "; break;
+	default:break;
+	}
+	switch ((sum - ((sum / 100) * 100)) % 10) {
+	case 0:cout << "ling"; break;
+	case 1:cout << "yi"; break;
+	case 2:cout << "er"; break;
+	case 3:cout << "san"; break;
+	case 4:cout << "si"; break;
+	case 5:cout << "wu"; break;
+	case 6:cout << "liu"; break;
+	case 7:cout << "qi"; break;
+	case 8:cout << "ba"; break;
+	case 9:cout << "jiu"; break;
+	default:break;
+	}
+
+	return 0;
