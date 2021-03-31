@@ -60,7 +60,7 @@ int main() {
 using namespace std;
 
 int main() {
-	char str[101];
+	char str[100];
 	int i = 0, sum = 0, character = 0;
 	cin >> str;
 	for (i = 0; i < strlen(str); i++) {
@@ -115,7 +115,7 @@ int main() {
 using namespace std;
 
 int main() {
-	char str[101];
+	char str[100];
 	int i = 0, sum = 0, character = 0;
 	cin >> str;
 	for (i = 0; i < strlen(str); i++) {
