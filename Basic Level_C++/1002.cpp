@@ -115,7 +115,7 @@ int main() {
 using namespace std;
 
 int main() {
-	char str[100];
+	char str[101];
 	int i = 0, sum = 0, character = 0;
 	cin >> str;
 	for (i = 0; i < strlen(str); i++) {
@@ -136,9 +136,11 @@ int main() {
 	default:break;
 	}	
 	switch ((sum-((sum/100)*100))/10) {
-	case 0:if(sum<10)break;
+	case 0:
+		if (sum < 10)
+			break;
 		else
-		cout << "ling "; break;
+			cout << "ling "; break;
 	case 1:cout << "yi "; break;
 	case 2:cout << "er "; break;
 	case 3:cout << "san "; break;
@@ -165,3 +167,4 @@ int main() {
 	}
 
 	return 0;
+}
