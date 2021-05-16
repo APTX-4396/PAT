@@ -26,3 +26,31 @@ int main() {
 
 	return 0;
 }
+
+
+#include<iostream>
+using namespace std;
+int main() {
+	int a, b;
+	int n, right_digit;
+	bool flag = 1;
+	cin >> a >> b;
+	n = a * b;
+	do {
+		right_digit = n % 10;
+		if (flag) {
+			if (right_digit == 0) {
+				;//空语句 无任何含义但需要表现出来
+			}
+			else {
+				flag = 0;
+				cout << right_digit;
+			}
+		}
+		else
+		cout << right_digit;
+		n /= 10;
+	} while (n != 0);
+
+	return 0;
+}
