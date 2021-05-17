@@ -40,7 +40,7 @@ int main() {
 		right_digit = n % 10;
 		if (flag) {
 			if (right_digit == 0) {
-				;//空语句 无任何含义但需要表现出来
+				;//空语句 无任何含义但需要表现出来  //这里也不能使用continue
 			}
 			else {
 				flag = 0;
